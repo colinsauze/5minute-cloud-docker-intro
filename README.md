@@ -4,8 +4,8 @@ WARNING: These notes were written for students of the AIMLAC Centre for Doctoral
 
 ## Pre-Requisties
 
-* A [https://hub.docker.com](Dockerhub) account
-* A [https://cloud.google.com/](Google Cloud) or [https://portal.azure.com/](Azure) account with some credit. Get the [https://education.github.com/pack](Github Student Pack) for some free Azure credit.
+* A [Dockerhub](https://hub.docker.com) account
+* A [Google Cloud](https://cloud.google.com) or [Azure](https://portal.azure.com) account with some credit. Get the [Github Student Pack](https://education.github.com/pack) for some free Azure credit.
 * A local install of Docker and git.
 
 ## Build the Docker container
@@ -42,7 +42,7 @@ Run:
 Google cloud has an option to deploy a container directly but it doesn't allow any network services like web servers running in that container to be accessed from the internet. Instead we will have to create a standard VM and manually run docker on it.
 
 
-* Go to the [https://console.cloud.google.com/](Google Cloud Console)
+* Go to the [Google Cloud Console](https://console.cloud.google.com/)
 * Click on the grill menu in the top left, choose "Compute Engine" and then click "VM Instances". 
 
 ![VM instances](screenshots/gcloud_step1.png)
@@ -84,7 +84,7 @@ This will download the image and start it running. The `--restart always` option
 
 ## Deploy on Azure
 
-* Go to https://portal.azure.com/
+* Go to [https://portal.azure.com/](https://portal.azure.com/)
 * Under the "Azure Services" section mouse over "Container Instances" and click on "Create"
 
 ![Create Container Instance](screenshots/azure_step1.png)
@@ -136,7 +136,7 @@ This will download the image and start it running. The `--restart always` option
 
 * If you want a more friendly name and own an internet domain already, create a new "A record" for this IP address using your internet domain registrar's control panel page.
 * The Github student pack has free domain registrations with Namecheap and Name.com. 
-* [https://no-ip.com](no-ip.com) offers a free "dynamic dns" where you can get a DNS record for <your hostname>.ddns.net instead of using your own domain.
+* [no-ip.com](https://no-ip.com) offers a free "dynamic dns" where you can get a DNS record for <your hostname>.ddns.net instead of using your own domain.
 
 ## Things to remember
 * Your VM will keep running (and using credit) until you delete it.

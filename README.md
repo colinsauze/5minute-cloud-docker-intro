@@ -101,7 +101,7 @@ This will download the image and start it running. The `--restart always` option
 
 * Click Next to go to the Networking page.
 * "Include public IP address" should already be set to Yes and port 80 TCP should alreday be allowed, if they aren't then change it so they are.
-* If you want an easy to remember name instead of just an IP address put something in the DNS name label box. 
+* If you want an easy to remember name instead of just an IP address put something in the DNS name label box. Note: this can't start with a number. 
 
 ![Networking screen](screenshots/azure_step4.png)
 
@@ -138,14 +138,7 @@ This will download the image and start it running. The `--restart always` option
 * The Github student pack has free domain registrations with Namecheap and Name.com. 
 * [https://no-ip.com](no-ip.com) offers a free "dynamic dns" where you can get a DNS record for <your hostname>.ddns.net instead of using your own domain.
 
-
 ## Things to remember
-
 * Your VM will keep running (and using credit) until you delete it.
 * This is running on the public internet. Every web crawler, bot, script kiddie, hacker etc will have access to it.
 * The content your serving isn't encrypted in transit. If you want to encrypt it look at using LetsEncrypt, but you'll need a domain name first.
-
-
-
-
-

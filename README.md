@@ -39,9 +39,6 @@ Run:
 
 ## Deploy on Google Cloud
 
-Google cloud has an option to deploy a container directly but it doesn't allow any network services like web servers running in that container to be accessed from the internet. Instead we will have to create a standard VM and manually run docker on it.
-
-
 * Go to the [Google Cloud Console](https://console.cloud.google.com/)
 * Click on the grill menu in the top left, choose "Compute Engine" and then click "VM Instances". 
 
@@ -50,26 +47,13 @@ Google cloud has an option to deploy a container directly but it doesn't allow a
 * Click on "Create Instance" on the page showing the list of current instances.
 * Give your VM a name, as we won't need much processing power choose f1-micro as the Machine type. 
 
-![Create an instance](screenshots/gcloud_step2.png)
-
-* Click "Change" on the Boot disk and choose "Container Optimized OS"
-
 ![Cloud OS](screenshots/gcloud_step3.png)
 
-* Tick "Allow HTTP traffic" at the bottom of the page under Firewall
+* Scrolldown and tick "Allow HTTP traffic" at the bottom of the page under Firewall
 
 ![Allow HTTP](screenshots/gcloud_step4.png)
 
 * Click create
-* Once created SSH into the VM by clicking the SSH option in the Connect column of the VM list.
-
-![SSH to VM](screenshots/gcloud_step5.png)
-![SSH to VM](screenshots/gcloud_step6.png)
-
-* In the SSH session type: `docker run --name webserver --restart always -d -p 80:80 username/5min-cloud-docker`
-This will download the image and start it running. The `--restart always` option means it will restart auomatically when the VM reboots.
-
-![Docker run command](screenshots/gcloud_step7.png)
 
 * Go back to the VM Instances page in the Google Cloud Console and click on the link to the external IP address (104.154.185.63 in this example) or type this address into a new tab/window of your web browser.
 
@@ -81,6 +65,14 @@ This will download the image and start it running. The `--restart always` option
 
 * Don't forget to delete the instance when you are done with it.
 
+* If for whatever reason you need to login to the instane then click on the SSH option under the connect column in the VM Instances page and choose "Open in browser Window."
+
+![SSH to VM](screenshots/gcloud_step5.png)
+![SSH to VM](screenshots/gcloud_step6.png)
+
+* From here you can run docker commands and see the container we specified is running.
+
+![SSH to VM](screenshots/gcloud_step7.png)
 
 ## Deploy on Azure
 

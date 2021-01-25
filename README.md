@@ -45,9 +45,11 @@ Run:
 ![VM instances](screenshots/gcloud_step1.png)
 
 * Click on "Create Instance" on the page showing the list of current instances.
-* Give your VM a name, as we won't need much processing power choose f1-micro as the Machine type. 
+* Give your VM a name, as we won't need much processing power choose f1-micro as the Machine type by selecting the N1 Series.
+* Tick "Deploy a container image to this VM instance".
+* Enter the path to your container on Docker Hub (in this case colinsauze/5min-cloud-docker) in the "Container image" box.
 
-![Cloud OS](screenshots/gcloud_step3.png)
+![Cloud OS](screenshots/gcloud_step2.png)
 
 * Scrolldown and tick "Allow HTTP traffic" at the bottom of the page under Firewall
 

@@ -53,28 +53,28 @@ Run:
 
 * Scrolldown and tick "Allow HTTP traffic" at the bottom of the page under Firewall
 
-![Allow HTTP](screenshots/gcloud_step4.png)
+![Allow HTTP](screenshots/gcloud_step3.png)
 
 * Click create
 
 * Go back to the VM Instances page in the Google Cloud Console and click on the link to the external IP address (104.154.185.63 in this example) or type this address into a new tab/window of your web browser.
 
-![List of instances](screenshots/gcloud_step8.png)
+![List of instances](screenshots/gcloud_step4.png)
 
 * You should see the same page that was shown in the local test
 
-![Working webpage](screenshots/gcloud_step9.png)
+![Working webpage](screenshots/gcloud_step5.png)
 
 * Don't forget to delete the instance when you are done with it.
 
 * If for whatever reason you need to login to the instane then click on the SSH option under the connect column in the VM Instances page and choose "Open in browser Window."
 
-![SSH to VM](screenshots/gcloud_step5.png)
 ![SSH to VM](screenshots/gcloud_step6.png)
+![SSH to VM](screenshots/gcloud_step7.png)
 
 * From here you can run docker commands and see the container we specified is running.
 
-![SSH to VM](screenshots/gcloud_step7.png)
+![SSH to VM](screenshots/gcloud_step8.png)
 
 ## Deploy on Azure
 
